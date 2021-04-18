@@ -1,0 +1,6 @@
+trigger Contact_Trigger on Contact (before insert) {
+    for(Contact c : Trigger.New) {
+        c.textcombined__c = c.text1__c + c.text2__c;
+    }
+
+}
